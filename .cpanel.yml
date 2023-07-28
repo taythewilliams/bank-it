@@ -2,6 +2,6 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/tiqindus/bank-it.tiqindustries.com/
-    - /bin/cp -R images $DEPLOYPATH
+    - /bin/cp index.php $DEPLOYPATH
 
 # this file is necessary for cpanel to deploy site.
