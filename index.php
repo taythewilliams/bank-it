@@ -1,3 +1,3 @@
 <?php
 
-echo '<h1>welcome to bank it, a game for two or more. Coming soon.</h1>';
+echo '<h1>Welcome to bank it. Coming soon.</h1>';
