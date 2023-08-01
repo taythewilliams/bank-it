@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    container_name: bank_it
+    restart: always
+    working_dir: /var/www/html
+    volumes:
+      - ../src:/var/www/html
+  php:
+    image: php:8.2-apache
+    container_name: bank_it_apache
+    restart: always
+    ports:
+      - '8000:80'
+    volumes:
+      - ../src:/var/www/html
