@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <div class="current-die">
+        <img src="/images/die/die_{{ currentDie }}.png">
+    </div>
+    <a class="play-button" href="{{ path('roll', { totalRounds: totalRounds, round: round, current: current }) }}">roll!</a>
+    <div class="stats">
+        <div class="row">
+            <div class="label">{{ status }}</div>
+            <div class="stat">{{ current }}</div>
+        </div>
+        <div class="row">
+            <div class="label">previous</div>
+            <div class="stat">{{ previous }}</div>
+        </div>
+        <div class="row">
+            <div class="label">round</div>
+            <div class="stat">{{ round }}/{{ totalRounds }}</div>
+        </div>
+    </div>
+
+{%  endblock %}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Bank It!{% endblock %}</title>
+        <link rel="icon" type="image/x-icon" href="/images/favicon.svg">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap" rel="stylesheet">
+        {% block stylesheets %}
+            <link rel="stylesheet" href="/styles/styles.css">
+        {% endblock %}
+
+        {% block javascripts %}
+{% block importmap %}{{ importmap('app') }}{% endblock %}
+        {% endblock %}
+    </head>
+    <body>
+        <header>
+            {% block header %}<h1>Bank It!</h1>{% endblock %}
+        </header>
+        {% block body %}{% endblock %}
+        <footer>
+            {% block footer %}<a class="quit" href="{{ path('index') }}">quit game</a>{% endblock %}
+        </footer>
+    </body>
+</html>

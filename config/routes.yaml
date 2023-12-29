@@ -1,0 +1,18 @@
+index:
+    path: /
+    controller: App\Controller\HomeController::homepage
+rules:
+    path: /rules
+    controller: App\Controller\HomeController::rules
+select:
+    path: /select
+    controller: App\Controller\GameController::selectRounds
+confirm:
+    path: /select/{totalRounds}
+    controller: App\Controller\GameController::selectConfirm
+play:
+    path: /play/{totalRounds}
+    controller: App\Controller\GameController::playStart
+roll:
+    path: /round{round}/{totalRounds}/prev-total/{current}
+    controller: App\Controller\GameController::roll

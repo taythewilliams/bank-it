@@ -1,0 +1,21 @@
+* {
+    color: #BBFF00;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+}
+body {
+    background-color: #000000;
+}
+.quit {
+    color: #FF0085;
+}
+.rules {
+    color: #FFFFFF;
+}
+.play-button {
+    background-color: #BBFF00;
+    color: #000000;
+    font-weight: 900;
+    padding: 8px 10px;
+    border-radius: 50px;
+}

@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <h2>how many rounds in this game?</h2>
+
+    <ul>
+        {% for option in roundOptions %}
+            <option value="{{ option }}" {{ (option == totalRounds) ? 'selected class="option"' : 'class="option not-selected"' }}>{{ option }}</option>
+        {% endfor %}
+    </ul>
+    <a class="play-button" href="{{ path('play', { totalRounds: totalRounds }) }}">continue</a>
+
+{%  endblock %}

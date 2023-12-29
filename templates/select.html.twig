@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <h2>how many rounds in this game?</h2>
+
+    <ul>
+        {% for number in roundOptions %}
+            <a class="option" href="{{ path('confirm', { totalRounds: number }) }}">{{ number }}</a>
+        {% endfor %}
+    </ul>
+
+{%  endblock %}
+
+{% block footer %}
+
+    <a href="rules">what are the rules?</a>
+
+{% endblock %}
